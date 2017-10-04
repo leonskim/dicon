@@ -1,0 +1,3 @@
+rootProject.name = 'dicon'
+
+include ':app'
