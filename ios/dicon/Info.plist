@@ -41,7 +41,6 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>NSAppTransportSecurity</key>
-	<!--See http://ste.vn/2015/06/10/configuring-app-transport-security-ios-9-osx-10-11/ -->
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
@@ -49,6 +48,39 @@
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
 				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>IconA</string>
+			</array>
+			<key>UIPrerenderedIcon</key>
+			<false/>
+		</dict>
+		<key>CFBundleAlternateIcons</key>
+		<dict>
+			<key>AppIconB</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>IconB</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
+			</dict>
+			<key>AppIconC</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>IconC</string>
+				</array>
+				<key>UIPrerenderedIcon</key>
+				<false/>
 			</dict>
 		</dict>
 	</dict>
