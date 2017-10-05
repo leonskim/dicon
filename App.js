@@ -16,30 +16,27 @@ import {
 
 export default class App extends Component<{}> {
 
-  buttonOnPress = (idx) => {
-    switch (idx) {
-      case 1:
-        break
-      case 2:
-        break
-      case 3:
-        break
-    }
+  buttonOnPress = (icon) => {
+    NativeModules.IconChanger.set(icon)
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.button} onPress={() => this.buttonOnPress(1)}>
-          <Text>IconA</Text>
+        <TouchableOpacity style={styles.button} onPress={() => this.buttonOnPress('AppIconA')}>
+          <Text>Icon A</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => this.buttonOnPress(2)}>
-          <Text>IconB</Text>
+        <TouchableOpacity style={styles.button} onPress={() => this.buttonOnPress('AppIconB')}>
+          <Text>Icon B</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.button} onPress={() => this.buttonOnPress(3)}>
-          <Text>IconC</Text>
+        <TouchableOpacity style={styles.button} onPress={() => this.buttonOnPress('AppIconC')}>
+          <Text>Icon C</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.button} onPress={() => this.buttonOnPress(null)}>
+          <Text>Reset</Text>
         </TouchableOpacity>
       </View>
     );
